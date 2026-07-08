@@ -1,16 +1,14 @@
 n = int(input())
 
-ans = []
-
 for _ in range(n):
+    ch = False
     x = int(input())
-    a,b = x,0
-
-    while a>b:
-        m = a
-        while m>0:
-            m=0
-        a-=12
-        b+=12
-for i in ans:
-    print(i)
+    a = x%12
+    b = x-a
+    if a == 10:
+        if x == 10:
+            print(-1)
+        else:
+            print(22,x-22)
+    else:
+        print(a,b)
